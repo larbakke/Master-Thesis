@@ -1,0 +1,15 @@
+path: avalanceDataset1.0
+train: images/train
+val: images/val
+test: images/test
+batch_size: 12
+augmentation:
+  mosaic: 0.5
+  mixup: 0.5
+  degrees: 10
+  translate: 0.2
+  scale: 0.5
+  perspective: 0.2
+
+nc: 1
+names: [swimmer]
