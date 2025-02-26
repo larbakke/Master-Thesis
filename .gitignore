@@ -169,3 +169,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Ignoring the dataset:
+ComputerVision/.data
+ComputerVision/dataset
+.pt
+ComputerVision/runs/detect/*
+!ComputerVision/runs/detect/train8
