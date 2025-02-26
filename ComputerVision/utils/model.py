@@ -40,5 +40,5 @@ class ObjectDetection:
                   self.model = model
       
       def train_model(self, augment=False):
-            results= self.model.train(data=self.data, epochs = self.epochs, patience=self.patience, batch=8, imgsz=int(1920), augment=augment)
+            results= self.model.train(data=self.data, epochs = self.epochs, patience=self.patience, batch=6, imgsz=int(1920*0.77), augment=augment)
             return results
