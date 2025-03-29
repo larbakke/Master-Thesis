@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B28CE4BB1E4B43E7449F69A3 /* Pods_TestDJI_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B67B8BEF042B3805DC32880 /* Pods_TestDJI_SDK.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		032F956CEA76343854509141 /* Pods-TestDJI_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDJI_SDK.release.xcconfig"; path = "Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK.release.xcconfig"; sourceTree = "<group>"; };
+		3B67B8BEF042B3805DC32880 /* Pods_TestDJI_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDJI_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		807269F12D7F206D00D185AB /* TestDJI_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDJI_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF6619F6BE68947FD6A6D82 /* Pods-TestDJI_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDJI_SDK.debug.xcconfig"; path = "Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28CE4BB1E4B43E7449F69A3 /* Pods_TestDJI_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3CA3BC298BC9C17B281B0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAF6619F6BE68947FD6A6D82 /* Pods-TestDJI_SDK.debug.xcconfig */,
+				032F956CEA76343854509141 /* Pods-TestDJI_SDK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		807269E82D7F206D00D185AB = {
 			isa = PBXGroup;
 			children = (
 				807269F32D7F206D00D185AB /* TestDJI_SDK */,
 				807269F22D7F206D00D185AB /* Products */,
+				2C3CA3BC298BC9C17B281B0B /* Pods */,
+				8FF22D2BEFF14C9488942E41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +77,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8FF22D2BEFF14C9488942E41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B67B8BEF042B3805DC32880 /* Pods_TestDJI_SDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80726A042D7F206E00D185AB /* Build configuration list for PBXNativeTarget "TestDJI_SDK" */;
 			buildPhases = (
+				160AA7972BCABEA1AF6E3EF5 /* [CP] Check Pods Manifest.lock */,
 				807269ED2D7F206D00D185AB /* Sources */,
 				807269EE2D7F206D00D185AB /* Frameworks */,
 				807269EF2D7F206D00D185AB /* Resources */,
+				81FE4CF49FB50B9E8F4C6AFB /* [CP] Embed Pods Frameworks */,
+				8CAB0A1D569FDA9437594BBD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				807269F32D7F206D00D185AB /* TestDJI_SDK */,
 			);
 			name = TestDJI_SDK;
-			packageProductDependencies = (
-			);
 			productName = TestDJI_SDK;
 			productReference = 807269F12D7F206D00D185AB /* TestDJI_SDK.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		160AA7972BCABEA1AF6E3EF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestDJI_SDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81FE4CF49FB50B9E8F4C6AFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CAB0A1D569FDA9437594BBD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		807269ED2D7F206D00D185AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +227,7 @@
 /* Begin XCBuildConfiguration section */
 		80726A052D7F206E00D185AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF6619F6BE68947FD6A6D82 /* Pods-TestDJI_SDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -148,11 +236,15 @@
 				DEVELOPMENT_TEAM = 42YL476YVH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestDJI_SDK/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "for pico";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To detect objects";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "for locationg and gps";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "locationg and gps";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "for saving data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -168,6 +260,7 @@
 		};
 		80726A062D7F206E00D185AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 032F956CEA76343854509141 /* Pods-TestDJI_SDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -176,11 +269,15 @@
 				DEVELOPMENT_TEAM = 42YL476YVH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestDJI_SDK/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "for pico";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To detect objects";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "for locationg and gps";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "locationg and gps";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "for saving data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -231,7 +328,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -294,7 +391,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
