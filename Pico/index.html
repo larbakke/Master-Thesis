@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Avalanche Transceiver</title>
+        <script>
+            const ws = new WebSocket('ws://' + window.location.host + '/data');
+            
+            ws.addEventListener('message', event => {
+                const data = JSON.parse(event.data); // Expecting: { arrows: [true, false, ...], distance: 40 }
+                console.log(data)
+                // Update arrows (toggle filled or hollow)
+                for (let i = 0; i < 5; i++) {
+                    document.getElementById(`arrow${i}`).classList.toggle("active", data.arrows[i]);
+                }
+
+                // Update distance display
+                document.getElementById('distance').innerHTML = data.distance;
+            });
+        </script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: blue; /* Match the device's background */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .transceiver {
+                background-color: black;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .arrow-container {
+                position: absolute;
+                top: 10%;
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+            }
+            .arrow {
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 30px solid gray;
+                opacity: 0.5;
+            }
+            .arrow.active {
+                border-bottom-color: orange;
+                opacity: 1;
+            }
+            .distance {
+                font-family: 'Digital-7', sans-serif;
+                font-size: 80px;
+                color: orange;
+                background-color: black;
+                padding: 10px 20px;
+                border-radius: 10px;
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="transceiver">
+            <div class="arrow-container">
+                <div id="arrow0" class="arrow"></div>
+                <div id="arrow1" class="arrow"></div>
+                <div id="arrow2" class="arrow"></div>
+                <div id="arrow3" class="arrow"></div>
+                <div id="arrow4" class="arrow"></div>
+            </div>
+            <div id="distance" class="distance">40</div>
+        </div>
+    </body>
+</html>
+

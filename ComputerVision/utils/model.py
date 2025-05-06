@@ -1,18 +1,12 @@
 #from matplotlib.animation import FuncAnimation
 from ultralytics import YOLO
-import cv2
 import torch
 import numpy as np
-from time import time
-from PIL import Image
-import os
-#import matplotlib.pyplot as plt
-import time
 
 
 class ObjectDetection:
 
-      def __init__(self, data, epochs, patience = 10, pretrained = 'yolov11x.pt'):
+      def __init__(self, data, epochs, patience = 10, pretrained = 'yolo11x.pt'):
             self.data = data
             self.epochs = epochs
             self.patience = patience
@@ -26,7 +20,7 @@ class ObjectDetection:
 
             self.model = self.load_model(pretrained)
 
-      def load_model(self, pretrained='yolov11x.pt'):
+      def load_model(self, pretrained='yolo11x.pt'):
             model = YOLO(pretrained) #pretrained model  
             model.fuse() # opimising performance, reducing complexity, imporve inference speed
             return model
@@ -40,5 +34,5 @@ class ObjectDetection:
                   self.model = model
       
       def train_model(self, augment=False):
-            results= self.model.train(data=self.data, epochs = self.epochs, patience=self.patience, batch=8, imgsz=int(1920), augment=augment)
+            results= self.model.train(data=self.data, epochs = self.epochs, patience=self.patience, batch=6, imgsz=int(1920*0.77), augment=augment)
             return results

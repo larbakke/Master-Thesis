@@ -1,8 +1,7 @@
-path: avalanceDataset1.0
+path: dataset
 train: images/train
 val: images/val
-test: images/test
-batch_size: 12
+batch_size: 10
 augmentation:
   mosaic: 0.5
   mixup: 0.5
@@ -11,5 +10,5 @@ augmentation:
   scale: 0.5
   perspective: 0.2
 
-nc: 1
-names: [swimmer]
+nc: 3
+names: [glide, loose, slab]

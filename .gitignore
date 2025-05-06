@@ -169,3 +169,21 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Ignoring the dataset:
+ComputerVision/.data
+ComputerVision/dataset
+*.pt
+ComputerVision/runs/detect/*
+!ComputerVision/runs/detect/train8
+
+*.jpg
+*.png
+*.jpeg
+ComputerVision/uibk_avalanches.zip
+
+App/FlyingSkiPatrol2/Pods/*
+App/Mobile-SDK-iOS-master/*
+App/MyFirstWeatherApp/*
+App/TestDJI_SDK/*
