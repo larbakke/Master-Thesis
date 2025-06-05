@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-TestDJI_SDK/Pods-TestDJI_SDK-frameworks.sh
+${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework
+${PODS_ROOT}/DJI-UXSDK-iOS/iOS_UX_SDK/DJIUXSDK.framework
+${PODS_ROOT}/DJIWidget/FFmpeg/FFmpeg.framework
+${BUILT_PRODUCTS_DIR}/DJIWidget/DJIWidget.framework
+${PODS_ROOT}/Hdrpano/Hdrpano.framework
+${BUILT_PRODUCTS_DIR}/iOS-Color-Picker/iOS_Color_Picker.framework

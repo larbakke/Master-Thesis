@@ -3,9 +3,9 @@ import os
 from ultralytics import YOLO
 
 # --- CONFIG ---
-image_path = 'ComputerVision/dataset/images/val/2018-12-24 axamer lizum (5).jpg'          # Path to input image
+image_path = 'ComputerVision/dataset/images/val/2015-01-07 axamer lizum (4).jpg'          # Path to input image
 model_path = 'ComputerVision/runs/detect/train8/weights/best.pt'              # Path to YOLO model
-output_path = 'output4.jpg'          # Output image path
+output_path = 'output5.jpg'          # Output image path
 
 # --- LOAD MODEL ---
 model = YOLO(model_path)

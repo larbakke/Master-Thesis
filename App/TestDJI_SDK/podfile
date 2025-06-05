@@ -1,0 +1,12 @@
+platform :ios, '16.0'
+
+
+target 'TestDJI_SDK' do 
+	use_frameworks!
+  	pod 'DJI-SDK-iOS', '~> 4.16.2'
+  	pod 'DJI-UXSDK-iOS', '~> 4.16.2'
+  	pod 'DJIWidget', '~> 1.6.8'
+  	pod 'DJIFlySafeDatabaseResource', '~> 01.00.01.18'
+  	pod 'iOS-Color-Picker'
+	pod 'Hdrpano', '~> 1.1.0'
+end
