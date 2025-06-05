@@ -1,0 +1,1 @@
+this code was installed on a raspberry pi 2b. main.py runs the loramodue and starts a camera session.
