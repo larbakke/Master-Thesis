@@ -181,4 +181,5 @@ ComputerVision/runs/detect/*
 *.jpg
 *.png
 *.jpeg
+*.mp4
 ComputerVision/uibk_avalanches.zip
