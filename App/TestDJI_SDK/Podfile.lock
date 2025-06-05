@@ -1,0 +1,36 @@
+PODS:
+  - DJI-SDK-iOS (4.16.2)
+  - DJI-UXSDK-iOS (4.16.2)
+  - DJIFlySafeDatabaseResource (01.00.01.18)
+  - DJIWidget (1.6.8)
+  - Hdrpano (1.1.9)
+  - iOS-Color-Picker (1.2)
+
+DEPENDENCIES:
+  - DJI-SDK-iOS (~> 4.16.2)
+  - DJI-UXSDK-iOS (~> 4.16.2)
+  - DJIFlySafeDatabaseResource (~> 01.00.01.18)
+  - DJIWidget (~> 1.6.8)
+  - Hdrpano (~> 1.1.0)
+  - iOS-Color-Picker
+
+SPEC REPOS:
+  trunk:
+    - DJI-SDK-iOS
+    - DJI-UXSDK-iOS
+    - DJIFlySafeDatabaseResource
+    - DJIWidget
+    - Hdrpano
+    - iOS-Color-Picker
+
+SPEC CHECKSUMS:
+  DJI-SDK-iOS: 44308a021c3b95a912be52c4e7a8e0a27e5434f5
+  DJI-UXSDK-iOS: 8a9db4bda9fcc38ccf9861fb7d7ba30d44c7791c
+  DJIFlySafeDatabaseResource: 400e1856340042bd6943e53c2d4b374ac8409702
+  DJIWidget: 9d92abb52888cd6296717c93feacd8a703bf678a
+  Hdrpano: 8b67a6fdcd375852baa875025cc9703bda04b6ae
+  iOS-Color-Picker: 4284a4d744a7cafe9d22d4b66eefc45342b80f1d
+
+PODFILE CHECKSUM: 63513bf8db21dc81a17465aaf392008f30854b75
+
+COCOAPODS: 1.16.2
